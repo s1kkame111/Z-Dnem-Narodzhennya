@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To My Dearest Melanie</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=DM+Serif+Display&display=swap');
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'DM Serif Display', serif;
+      overflow: hidden;
+      background: linear-gradient(270deg, #fbd3e9, #c6f1e7, #fef6d5, #d0e6ff, #fbd3e9);
+      background-size: 1000% 1000%;
+      animation: pastelFlow 30s ease infinite;
+    }
+
+    @keyframes pastelFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vmin;
+      height: 60vmin;
+      perspective: 2000px;
+    }
+
+    .card {
+      width: 100%;
+      height: 100%;
+      background-color: #fce4ec;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    .card-side {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      box-sizing: border-box;
+      background-image: url('https://img.freepik.com/premium-vector/pink-wedding-card-with-floral-watercolor-template_11549628.htm');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-front {
+      z-index: 2;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      overflow-y: auto;
+    }
+
+    .heart-sticker {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5em;
+      color: #e91e63;
+      text-shadow: 0 0 5px #fff3f6;
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      color: #880e4f;
+      text-align: center;
+    }
+
+    .open-hint {
+      font-size: 1em;
+      margin-top: 20px;
+      color: #6a1b9a;
+      font-style: italic;
+    }
+
+    .message {
+      font-size: 1em;
+      color: #4a148c;
+      white-space: pre-wrap;
+      text-align: left;
+      max-height: 100%;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card-container" onclick="flipCard()">
+    <div class="card" id="birthdayCard">
+      <div class="card-side card-front">
+        <div class="heart-sticker">💌</div>
+        <div class="title">To the One My Heart Was Made For</div>
+        <div class="subtitle">Happy Birthday, My Melanie</div>
+        <div class="open-hint">Tap to open the love letter</div>
+      </div>
+      <div class="card-side card-back">
+        <div class="message">
+My sweetest Melanie,
+
+On this day, the universe gave me its most sacred gift — you.
+
+If I had the power to paint the sky, today it would shimmer in black and blue, your favorite hues — not just for how they look, but for how they feel.
+Black, like the mystery in your eyes that pulls me in deeper every day.
+Blue, like the peace I feel when I hear your voice, soft and steady like waves coming home to shore.
+
+There’s not a corner of my world you don’t touch, not a breath I take that isn’t wrapped in thoughts of you.
+
+You are the gentle rhythm behind every heartbeat.
+The warmth that turns lonely nights into quiet comfort.
+The daydream I fall into — eyes closed or wide awake.
+
+I imagine us together right now — you curled up with your favorite chips, a plate of sushi in front of you, your headphones playing “Here With Me,” and your sleepy smile lighting up the room like summer sun. I’d be there, beside you, watching you drift into a nap, and I'd think, “how did I get so lucky to love someone this beautiful?”
+
+You are a poem in motion, a melody in flesh.
+Sweet like strawberries, wild like mint, comforting like chocolate and cool like winterfrost.
+
+I love every inch of your soul —
+The soft parts that crave rest.
+The fiery sparks that defend what you love.
+The tender heart that holds space for mine, even from across the distance.
+
+If loving you is a dream, I never want to wake.
+
+You are not just my favorite type — you are the only one I ever want.
+
+So today, I celebrate more than your birth.
+I celebrate your existence.
+Your laughter.
+Your light.
+Your stubbornness, your sleepy eyes, your passion for little things, your voice that grounds me — everything that makes you, you.
+
+I know we’re miles apart… but my heart is right there with you. Always.
+
+No card could ever hold all the love I feel for you — but let this one try.
+
+Happy Birthday, my forever girl.
+
+Yours — heart, soul, and everything in between,
+
+Amen
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipCard() {
+      document.getElementById('birthdayCard').classList.toggle('is-flipped');
+    }
+  </script>
+</body>
+</html>
